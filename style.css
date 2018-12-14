@@ -1,0 +1,143 @@
+html, body
+{ 
+    margin:0; 
+    height:100%; 
+ 
+}
+
+.tree{
+    
+    margin-left: 10px;
+    float: left;
+    border-style:solid;
+    border-width:medium;
+    text-align:center 
+}
+#json{
+    
+}
+
+.json{
+    padding-top: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    float: left;
+    border-style:solid;
+    border-width:medium;
+    height: 210px;
+    width: 340px;
+    text-align:center ;
+}
+
+
+
+.left {
+    float: left;
+    margin:0;
+    height: 100%;
+    background-color: #24292e;
+    box-shadow: 10px 0px 5px #888888;
+    color: rgb(155, 155, 155);
+
+}
+.form{
+    padding-left: 20px;
+}
+.information{
+    padding-left: 20px;
+}
+.control_center{
+    padding-left: 20px;
+}
+.button {
+    margin-left: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;   
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: lightblue;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+    font-family: inherit;
+  }
+  .button:hover {background-color: rgb(99, 203, 238)}
+
+  .button:active {
+    background-color: rgb(99, 203, 238);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  #start.button{
+    background-color: lightcoral;
+  }
+  #start.button:active{
+    background-color: rgb(185, 94, 94);
+  }
+
+  .inputText{
+    border-radius:6px;
+    background-color: rgb(207, 207, 207);
+    padding:0px;
+    font-family: inherit;
+  }
+  .map-length{
+      margin-top: 50px;
+  }
+  .aaa{
+      width: 400px;
+      height: 1px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      background: white;
+      background:linear-gradient(to left,#24292e,white,#24292e);
+      width:100%;
+    }
+    
+    .topic{
+        font-size: 20px;
+        margin-left: 10px;  
+        color: rgb(7, 113, 148);
+    }
+    .topic#big{
+        font-size: 22px;
+        margin-left: 40px;  
+        color: rgb(93, 201, 236);
+    }
+    .cell_img{
+        margin-left: 10px;
+        margin-top: 10px;
+        float:left;
+        width:30px;
+        height: 30px;
+    }
+    .mark{
+        margin-left: 50px;
+        padding-top:15px;
+    }
+.map-length{
+    margin-top: 10px;
+}
+.information    {
+    margin-top: 10px;
+}
+.node circle {
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+  }
+   
+  .node {
+    font: 12px sans-serif;
+  }
+   
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }

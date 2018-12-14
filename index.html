@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta chartset="utf-8">
+    <title>to ASD</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <div class="left" id="left_navi">
+
+        <br>
+        <div class="topic" id="big">
+            <strong>算术表达式的抽象语法树转换器</strong>
+        </div>
+
+        <div class="aaa"></div>
+        <br>
+        <div class="topic">
+            配置
+        </div>
+        <div class="form">
+            <div class="map-length">
+                <label>表达式（前后不需要加#）:</label>
+                <br>
+                <input type="text" id="inputString" class="inputText"  value="1+2*2+b/a-3">
+            </div>
+            <br>
+            <div class="map-width">
+                <label>文法</label>
+                <br>
+                <textarea class="inputText" id="txtArea" rows="10" cols="25" readonly="readonly"></textarea>
+            </div>
+            <br>
+
+
+            <button id="confirm_map" class="button"> <a href="javascript:getVT();" class="btn">确定</a></button>
+
+
+        </div>
+
+    </div>
+    <label>&nbsp;&nbsp;语法树</label>
+    <div class="tree">  </div>
+
+
+    <div class="json">
+        <label>词法分析信息</label>
+        <textarea id="cifa" rows="10" cols="50" readonly="readonly"></textarea>
+    </div>
+    <div class="json">
+            <label>语法分析信息</label>
+        <textarea id="yufa" rows="10" cols="50" readonly="readonly"></textarea>
+    </div>
+    <div class="json">
+            <label>语法树Json信息</label>
+            <textarea id="json" rows="10" cols="50" readonly="readonly"></textarea>
+        </div>
+    <script type="text/javascript">
+        document.getElementById('txtArea').value = "S->E\nE->E+T\nE->E-T\nE->T\nT->T*F\nT->T/F\nT->F\nF->i\nF->(E)";
+    </script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="lexical.js"></script>
+    <script type="text/javascript" src="firstVT.js"></script>
+    <script type="text/javascript" src="lastVT.js"></script>
+    <script type="text/javascript" src="getMatrix.js"></script>
+    <script type="text/javascript" src="exec.js"></script>
+    <script type="text/javascript" src="tree.js"></script>
+
+</body>
+
+</html>
