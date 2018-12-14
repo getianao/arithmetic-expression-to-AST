@@ -179,7 +179,7 @@ function stepOne1() {
 //算法原理第二步：B=>A···且有a∈FIRSTVT(A)，则a∈FIRSTVT(B)
 function stepTwo1() {
     while (!(stk1.length == 0)) { //栈不为空
-        let relation = stk1[stk1.length-1];
+        let relation = stk1[stk1.length - 1];
         let nnn = stk1.length;
         stk1.pop();               //弹出,得到(A,a)
         for (let i = 0; i < productions1.length; i++) //遍历每个非终结符的EasyProductions
@@ -214,14 +214,14 @@ function printFirstVT() {
         var str = "FirstVT(" + vSymb1[i] + ")={ ";
         for (let j = 0; j < tNum1; j++) {
             if (firstvt[i][j] == 1) {
-                str = str + tSymb1[j]+" " ;
+                str = str + tSymb1[j] + " ";
             }
         }
         console.log(str + " }");
         yufaString = yufaString + str + " }\n";
-        
+
     }
-    yufaString = yufaString +"\n";
+    yufaString = yufaString + "\n";
 }
 
 function getFirstVT() {
@@ -233,7 +233,7 @@ function getFirstVT() {
     for (var i = 0; i < vNum1; i++) {
         firstvt[i] = new Array();
         for (var j = 0; j < tNum1; j++) {
-            firstvt[i][j] =0;
+            firstvt[i][j] = 0;
         }
     }
     stepOne1();
@@ -243,14 +243,19 @@ function getFirstVT() {
 
 }
 function showInf() {
-    cifaString = cifaString+"\n"+"符号表：" +  JSON.stringify(dic,null, "\t") + "\n\n" + "单词栈：" + JSON.stringify(table)  + "\n\n" + "词法正确!";
+    cifaString = cifaString + "\n" + "符号表：" + JSON.stringify(dic, null, "\t") + "\n\n" + "单词栈：" + JSON.stringify(table) + "\n\n" + "词法正确!";
     document.getElementById("cifa").value = cifaString;
-    yufaString = yufaString + "优先矩阵："+JSON.stringify(matrix, null, " ");
-   document.getElementById("yufa").value = yufaString;
-   document.getElementById("json").value =  JSON.stringify(root, null, "\t");
+    yufaString = yufaString + "优先矩阵：" + JSON.stringify(matrix, null, " ");
+    document.getElementById("yufa").value = yufaString;
+    document.getElementById("json").value = JSON.stringify(root, null, "\t");
+}
+function ini() {
+    cifaString = "";
+    yufaString = "";
 }
 
 function getVT() {
+    ini();
     start();
     getFirstVT();
     getLastVT();

@@ -9,7 +9,9 @@ var table = [];   //单词栈
 var inputString;
 
 function start() {
-    //TODO:初始化清空
+    dic = {}; 
+    table = [];
+    inputString = "";
     inputString = document.getElementById("inputString").value;
     lexicalAnalysis(inputString);
 }
