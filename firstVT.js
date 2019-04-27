@@ -260,7 +260,6 @@ function getVT() {
     getFirstVT();
     getLastVT();
     getMatrix();
-    console.log("终结符：", tSymb1);
     startExec();
     showInf();
     showTree();

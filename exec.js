@@ -36,7 +36,6 @@ function startExec() {//开始算符优先分析
     inputString2 = "#" + document.getElementById("inputString").value + "#";
     for (; i < inputString2.length; i++) {
         if (isTerminal(inputString2[i])) {
-
             switch (compMatrix(str[f], inputString2[i])) {
                 case 1: {//>,结束i-1
                     //向前找
@@ -109,16 +108,10 @@ function startExec() {//开始算符优先分析
                     break;
                 }
             }
-
         } else {
             str.push(inputString2[i]);//压栈
         }
-
-
-
     }
     if (str.length > 3) {//还没有结束
-        
-        
     }
 }
